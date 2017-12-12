@@ -33,4 +33,7 @@ async function syncHero() {
   console.log('table is in sync')
 }
 
-syncHero().catch(error => console.error(`Failed to create hero table: ${error.stack}`))
+syncHero().catch(error => {
+  console.error(`Failed to create hero table: ${error.stack}`)
+  process.exit()
+})

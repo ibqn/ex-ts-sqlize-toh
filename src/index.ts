@@ -6,12 +6,15 @@ import * as bodyParser from 'body-parser'
 import api from './routes/api'
 import { initDb } from './db'
 import * as nconf from 'nconf'
+import * as path from 'path'
 
 
 const app: express.Application = express()
 const server: http.Server = http.createServer(app)
 
-nconf.argv().env().file({ file: 'config.json' })
+nconf.argv().env().file({
+  file: path.join(path.dirname(path.dirname(__filename)), 'config.json')
+})
 
 async function run() {
   app.use(morgan('dev'))
