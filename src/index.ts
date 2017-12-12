@@ -1,6 +1,6 @@
 import * as http from 'http'
 import * as express from 'express'
-import { Request, Response, /* NextFunction */ } from "express"
+import { Request, Response, /* NextFunction */ } from 'express'
 import * as morgan from 'morgan'
 import * as bodyParser from 'body-parser'
 import api from './routes/api'
@@ -11,9 +11,7 @@ import * as nconf from 'nconf'
 const app: express.Application = express()
 const server: http.Server = http.createServer(app)
 
-nconf.argv()
-  .env()
-  .file({ file: 'config.json' });
+nconf.argv().env().file({ file: 'config.json' })
 
 async function run() {
   app.use(morgan('dev'))
@@ -24,7 +22,7 @@ async function run() {
 
   initDb().catch(error => {
     console.error(`Database connection error: ${error.stack}`)
-    //process.exit()
+    process.exit()
   })
 
 

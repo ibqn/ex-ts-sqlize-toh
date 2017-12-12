@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import { Hero } from '../models/hero'
 import { asyncMiddleware } from '../tools'
-import { Request, Response, /*NextFunction*/ } from "express"
+import { Request, Response, /*NextFunction*/ } from 'express'
 import * as Sequelize from 'sequelize'
 
 
