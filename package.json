@@ -1,0 +1,37 @@
+{
+  "name": "ex-ts-sqlize-toh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "clean": "rimraf dist",
+    "start": "nodemon --config nodemon.json",
+    "build": "tsc",
+    "serve": "node dist"
+  },
+  "keywords": [],
+  "author": "ibqn",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "nconf": "^0.9.1",
+    "sequelize": "^4.27.0",
+    "sqlite3": "^3.1.13"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.8",
+    "@types/express": "^4.0.39",
+    "@types/mocha": "^2.2.44",
+    "@types/morgan": "^1.7.35",
+    "@types/nconf": "0.0.35",
+    "@types/node": "^8.0.58",
+    "@types/sequelize": "^4.0.79",
+    "nodemon": "^1.12.1",
+    "ts-node": "~3.3.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2"
+  }
+}
