@@ -13,7 +13,7 @@ const server: http.Server = http.createServer(app)
 
 nconf.argv()
   .env()
-  .file({ file: './config.json' });
+  .file({ file: 'config.json' });
 
 async function run() {
   app.use(morgan('dev'))

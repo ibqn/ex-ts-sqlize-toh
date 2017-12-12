@@ -1,6 +1,6 @@
 # Getting Started
 
-    npm start
+    npm start -- --port 8080
     http :8080/api/hero
 
 ## Add new items
